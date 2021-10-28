@@ -34,7 +34,6 @@ body::-webkit-scrollbar-thumb:hover {
     animation: flow 35s ease-in-out infinite;
     transition-duration: 0.2s;
     background: linear-gradient(270deg, #7e3ffd, #ff6d6d, #84c8ec);
-    
     background-size: 300%;
 
     -webkit-background-clip: text;
