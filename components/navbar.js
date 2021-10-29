@@ -2,14 +2,11 @@ class Navbar extends HTMLElement {
     constructor() {super();}
 
     connectedCallback() {
-        this.classList.add("nav-topmost");
-        document.onscroll = function() {
-            console.log(this);
+        document.onscroll = () => {
             if (window.scrollY === 0)
                 document.getElementById("navbar").classList.add("nav-topmost");
             else
                 document.getElementById("navbar").classList.remove("nav-topmost");
-            console.log(document.body.scrollTop);
         }
         this.innerHTML =
 `

@@ -19,32 +19,30 @@ body::-webkit-scrollbar-thumb {
 }
 
 nav {
+    text-align: center;
     box-sizing: border-box;
     transition-duration: 300ms;
-    text-align: center;
+
     border: 1px solid var(--nav-border-color);
-    /*border-radius: 2em;*/
+    border-radius: 20px;
+
     width: 50%;
     height: 3em;
-    margin-left: auto;
-    margin-right: auto;
-    position: fixed;
-    left: 50%;
-    top: 2%;
-    margin-left: -25%;
-    background-color: rgba(0, 0, 0, 0.1);
-    -webkit-backdrop-filter: blur(3px);
-    backdrop-filter: blur(3px);
-    border-radius: 20px;
 
     display: flex;
     z-index: 1;
+    position: fixed;
+    margin-left: -25%;
+    left: 50%;
+    top: 2%;
 
-    display: none;
+    background-color: rgba(0, 0, 0, 0.1);
+    -webkit-backdrop-filter: blur(3px);
+    backdrop-filter: blur(3px);
 }
 
 .nav-topmost {
-    border: 0px solid rgba(255, 255, 255, 0);
+    border: 0 solid rgba(255, 255, 255, 0);
     background-color: transparent;
 }
 
@@ -55,20 +53,19 @@ nav {
     }
 }
 
-.nav-item:last-child {
-    border-right: none;
-}
+.nav-item:last-child {border-right: none;}
 
 .nav-item {
     border-right: 1px solid var(--nav-border-color);
-    text-decoration: none;
+
     display: flex;
+    width: 100%;
     justify-content: center;
     align-items: center;
+
     color: #eee;
-    width: 100%;
-    text-decoration: underline 0.5em rgba(255, 255, 255, 0);
     transition: text-decoration-color 300ms;
+    text-decoration: underline 0.5em rgba(255, 255, 255, 0);
     text-transform: uppercase;
 }
 
@@ -87,9 +84,9 @@ nav {
     font-size: 5em;
     animation: flow 35s ease-in-out infinite;
     transition-duration: 0.2s;
+
     background: linear-gradient(270deg, #7e3ffd, #ff6d6d, #84c8ec);
     background-size: 300%;
-
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -109,7 +106,7 @@ nav {
 
 .header-link {
     min-width: 8em;
-    flex: 1 0 0em;
+    flex: 1 0 0;
 }
 .header-link ion-icon:hover {color: #e8e9f5;}
 .header-link ion-icon {
@@ -135,7 +132,7 @@ h2 {
 }
 
 @keyframes flow {
-    /* It would normally be 0%, 100%, 0%, but we substract a few percent because otherwise the start and stop is too long */
+    /* It would normally be 0%, 100%, 0%, but we subtract a few percent because otherwise the start and stop is too long */
     0%   {background-position: 4% 50%}
     50%  {background-position: 100% 50%}
     100% {background-position: 4% 50%}
