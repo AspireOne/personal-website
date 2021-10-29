@@ -106,7 +106,7 @@ nav {
     height: 4em;
 }
 
-ion-icon {
+.noselect {
     -webkit-tap-highlight-color: transparent;
     -webkit-touch-callout: none;
     -webkit-user-select: none;
@@ -115,7 +115,7 @@ ion-icon {
     user-select: none;
 }
 
-ion-icon:focus {
+.noselect:focus {
     outline: none !important;
 }
 
