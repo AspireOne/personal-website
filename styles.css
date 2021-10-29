@@ -92,6 +92,7 @@ nav {
     display: inline-flex;
     flex-wrap: wrap;
     margin: 5em auto auto;
+    height: 4em;
 }
 
 .header-link {
