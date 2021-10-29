@@ -1,3 +1,7 @@
+:root {
+    --nav-border-color: rgba(255, 255, 255, 0.4);
+}
+
 body {
     /*transition-duration: 0.3s;*/
     background-color: rgb(31, 31, 38);
@@ -15,8 +19,10 @@ body::-webkit-scrollbar-thumb {
 }
 
 nav {
+    box-sizing: border-box;
+    transition-duration: 300ms;
     text-align: center;
-    border: 1px solid rgba(255, 255, 255, 0.5);
+    border: 1px solid var(--nav-border-color);
     /*border-radius: 2em;*/
     width: 50%;
     height: 3em;
@@ -33,7 +39,11 @@ nav {
 
     display: flex;
     z-index: 1;
-    display: none;
+}
+
+.nav-topmost {
+    border: 0px solid rgba(255, 255, 255, 0);
+    background-color: transparent;
 }
 
 @media only screen and (max-width: 800px) {
@@ -48,7 +58,7 @@ nav {
 }
 
 .nav-item {
-    border-right: 1px solid rgba(255, 255, 255, 0.5);
+    border-right: 1px solid var(--nav-border-color);
     text-decoration: none;
     display: flex;
     justify-content: center;
