@@ -1,13 +1,9 @@
-import Parallax from "./parallax.js";
-const root = document.documentElement;
-const themeProperties = ["--background-color", "--strong-color", "--text-color"];
+//import Parallax from "./parallax.js";
+import "./components/navbar.js";
+import "./components/footer.js";
 
 document.addEventListener("DOMContentLoaded", () => {
-    //new Parallax(document.getElementsByTagName("h1")[0], 4, 0).makeParallaxed();
-    //document.getElementById("theme-changer-button").addEventListener("click", () => switchTheme());
-    document.addEventListener("mousemove",
-        (e) => document.getElementById("title").style.transform = "rotate(" + e.movementX * 0.1 + "deg)");
-
+    document.addEventListener("mousemove", (e) => document.getElementById("title").style.transform = "rotate(" + e.movementX * 0.1 + "deg)");
     document.addEventListener("visibilitychange", () => document.getElementById("title").style.transform = "rotate(0deg)");
 
     Array.from(document.getElementsByClassName("age-placeholder")).forEach((element) => element.innerHTML = getMyAge().years);
@@ -18,12 +14,6 @@ document.addEventListener("DOMContentLoaded", () => {
         })
     });
 });
-
-function switchTheme() {
-    const isDark = root.style.getPropertyValue("--background-color") === root.style.getPropertyValue("--background-color-dark");
-    const suffix = isDark ? "-light" : "-dark";
-    themeProperties.forEach(property => root.style.setProperty(property, "var(" + property + suffix + ")"));
-}
 
 function getMyAge() {
     const birthTimestamp = 1102287603 * 1000;
@@ -36,3 +26,12 @@ function getMyAge() {
 
     return {years: years, months: months};
 }
+
+/*const root = document.documentElement;
+const themeProperties = ["--background-color", "--strong-color", "--text-color"];*/
+
+/*function switchTheme() {
+    const isDark = root.style.getPropertyValue("--background-color") === root.style.getPropertyValue("--background-color-dark");
+    const suffix = isDark ? "-light" : "-dark";
+    themeProperties.forEach(property => root.style.setProperty(property, "var(" + property + suffix + ")"));
+}*/

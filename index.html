@@ -12,13 +12,13 @@
     </script>
 
     <meta charset="UTF-8">
-    <!-- Global site tag (gtag.js) - Google Analytics -->
     <title>Matěj Pešl - Hlavní Stránka</title>
     <meta name="Description" CONTENT="Osobní stránka vývojáře Matěje Pešla">
     <meta name=”robots” content="index, follow">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Raleway:wght@100&family=Roboto:ital,wght@0,100;0,400;1,100&display=swap" rel="stylesheet">
@@ -27,46 +27,46 @@
 <!--<button id="theme-changer-button">
     <ion-icon item-start name="logo-facebook" size="large"></ion-icon>
 </button>-->
-
+<navbar-component></navbar-component>
 <section id="header">
     <h1 id="title">Matěj Pešl</h1>
     <h2>Profesionální vývojář, rozený filozof, psycholog amatér a tak dále.</h2>
 
     <div id="header-links">
-        <div class="header-link">
+        <div class="header-link" data-aos="fade-up" data-aos-duration="500" data-aos-delay="0">
             <span class="description">facebook.com/matej.pesl1</span>
             <a href="https://www.facebook.com/matej.pesl1" target="_blank" draggable="false" unselectable="on">
                 <ion-icon item-start name="logo-facebook" size="large"></ion-icon>
             </a>
         </div>
 
-        <div class="header-link">
+        <div class="header-link" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">
             <span class="description">matejpesl1@gmail.com</span>
             <a href="mailto:matejpesl1@gmail.com" target="_blank" draggable="false" unselectable="on">
                 <ion-icon item-start name="mail" size="large"></ion-icon>
             </a>
         </div>
 
-        <div class="header-link">
+        <div class="header-link" data-aos="fade-up" data-aos-duration="500" data-aos-delay="200">
             <span class="description">+420 732 175 490</span>
             <a href="tel:+420732175490" target="_blank" draggable="false" unselectable="on">
                 <ion-icon item-start name="call" size="large"></ion-icon>
             </a>
         </div>
 
-        <div class="header-link">
+        <div class="header-link" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
             <span class="description">github.com/AspireOne</span>
             <a href="https://www.github.com/AspireOne" target="_blank" draggable="false" unselectable="on">
                 <ion-icon item-start name="logo-github" size="large"></ion-icon>
             </a>
         </div>
 
-        <div class="header-link">
+<!--        <div class="header-link" data-aos="fade-up" data-aos-duration="500" data-aos-delay="400">
             <span class="description">play.google.com/store/apps/dev?id=6992900021865495923</span>
             <a href="https://play.google.com/store/apps/dev?id=6992900021865495923" target="_blank" draggable="false" unselectable="on">
                 <ion-icon item-start name="logo-google-playstore" size="large"></ion-icon>
             </a>
-        </div>
+        </div>-->
     </div>
     <p id="header-description-box"></p>
 </section>
@@ -115,44 +115,12 @@
     </div>
 </section>
 
-<footer>
-    <div id="bottom">
-        <div id="bottom-icons">
-            <div class="bottom-icon tooltip">
-                <span class="tooltiptext">facebook.com/matej.pesl1</span>
-                <a href="https://www.facebook.com/matej.pesl1" target="_blank" draggable="false" unselectable="on">
-                    <ion-icon item-start name="logo-facebook" size="large"></ion-icon>
-                </a>
-            </div>
-
-            <div class="bottom-icon tooltip">
-                <span class="tooltiptext">matejpesl1@gmail.com</span>
-                <a href="mailto:matejpesl1@gmail.com" target="_blank" draggable="false" unselectable="on">
-                    <ion-icon item-start name="mail" size="large"></ion-icon>
-                </a>
-            </div>
-
-            <div class="bottom-icon tooltip">
-                <span class="tooltiptext">732 175 490</span>
-                <a href="tel:+420732175490" target="_blank" draggable="false" unselectable="on">
-                    <ion-icon item-start name="call" size="large"></ion-icon>
-                </a>
-            </div>
-
-            <div class="bottom-icon tooltip">
-                <span class="tooltiptext">github.com/AspireOne</span>
-                <a href="https://www.github.com/AspireOne" target="_blank" draggable="false" unselectable="on">
-                    <ion-icon item-start name="logo-github" size="large"></ion-icon>
-                </a>
-            </div>
-
-        </div>
-        <p id="copyright">© 2021 Matěj Pešl. Všechna práva vyhrazena.</p>
-    </div>
-</footer>
+<footer-component></footer-component>
 
 <script src="main.js" type="module"></script>
 <script type="module" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule="" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>AOS.init();</script>
 </body>
 </html>
